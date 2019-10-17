@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app",
+    "deploy": "gccould app deploy",
     "dev": "nodemon app"
   },
   "repository": {
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/captainandrey/IkeaExampleApp1#readme",
   "dependencies": {
+    "@google-cloud/datastore": "^4.4.0",
     "express": "^4.17.1",
     "uuid": "^3.3.3"
   },

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const uuid = require('uuid');
 
+
 const customers = [
     {
         id: 1,
@@ -16,8 +17,10 @@ const customers = [
 
 ];
 
+
+
 router.get('/', (req, res) => {
-    res.json(customers)
+    res.json(customers);
 });
 
 router.get('/:id', (req, res) => {
@@ -39,8 +42,6 @@ router.post('/', (req, res)=>{
     customers.push(newCustomer);
 
     res.json(customers);
-
-
 });
 
 module.exports = router;
