@@ -1,5 +1,5 @@
 {
-  "name": "IkeaExampleApp1",
+  "name": "Exercise1",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/captainandrey/IkeaExampleApp1.git"
+    "url": "git+https://github.com/captainandrey/Exercise1.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/captainandrey/IkeaExampleApp1/issues"
+    "url": "https://github.com/captainandrey/Exercise1/issues"
   },
-  "homepage": "https://github.com/captainandrey/IkeaExampleApp1#readme",
+  "homepage": "https://github.com/captainandrey/Exercise1#readme",
   "dependencies": {
     "@google-cloud/datastore": "^4.4.0",
     "express": "^4.17.1"
