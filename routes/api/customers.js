@@ -17,14 +17,35 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
+   
     const key = ds.key([kind, parseInt(req.params.id, 10)]);
+    console.log(key);
     ds.get(key, (err, customer) => {
         if(!err && customer){
             customer.id = key.id;
             res.json(customer);
         }
         else{
-            res.status(404).json({msg: `Customer with id = ${req.params.id} not found`});
+            return res.status(404).json({msg: `Customer with id = ${req.params.id} not found`});
+        }
+    });
+});
+
+router.post('/', (req, res) => {
+    const key = ds.key(kind);
+
+    const entity = {
+        key: key,
+        data: req.body
+      };
+    ds.save(entity, (err) => {
+        if(err){
+            res.status(400).json({msg: err});
+        }
+        else{
+            const customer = entity.data;
+            customer.id = key.id;
+            res.json(customer)
         }
     });
 });
